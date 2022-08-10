@@ -24,9 +24,6 @@ Path Line Strings approach
 
 This model is expanded upon in the course of the attached notebooks. It shows how to ingest AIS data, how to process it at scale leveraging Mosaic in Databricks, and provides examples of how to extend the analysis to incorporate additional sources. 
 
-## Requirements
-This notebook series was run on Databricks with the [Mosaic](https://github.com/databrickslabs/mosaic/tree/main/python) library installed. For this example it is recommended to install it from [PyPi](https://pypi.org/project/databricks-mosaic/) on your Databricks cluster like [so](https://docs.databricks.com/libraries/cluster-libraries.html).  
-
 *created by [@tiems90](https://github.com/tiems90)* 
 
 | library                                | description             | license             | source                                              |
