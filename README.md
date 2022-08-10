@@ -28,3 +28,7 @@ This model is expanded upon in the course of the attached notebooks. It shows ho
 This notebook series was run on Databricks with the [Mosaic](https://github.com/databrickslabs/mosaic/tree/main/python) library installed. For this example it is recommended to install it from [PyPi](https://pypi.org/project/databricks-mosaic/) on your Databricks cluster like [so](https://docs.databricks.com/libraries/cluster-libraries.html).  
 
 *created by [@tiems90](https://github.com/tiems90)* 
+
+| library                                | description             | license             | source                                              |
+|----------------------------------------|-------------------------|---------------------|-----------------------------------------------------|
+| mosaic                                 | library                 | Databricks License  | https://github.com/databrickslabs/mosaic            |
