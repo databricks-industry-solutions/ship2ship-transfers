@@ -75,7 +75,7 @@ display(AIS_df)
 
 # MAGIC %md ## Harbours
 # MAGIC 
-# MAGIC This data can be obtained from [here](https://data-usdot.opendata.arcgis.com/datasets/usdot::ports-major/about), and loaded with the code below.
+# MAGIC This data can be obtained from [the US DOT](https://www.transportation.gov/data), and loaded with the code below.
 # MAGIC 
 # MAGIC To avoid detecting overlap close to, or within harbours, in Notebook `03.b Advanced Overlap Detection` we filter out events taking place close to a harbour.
 # MAGIC Various approaches are possible, including filtering out events too close to shore, and can be implemented in a similar fashion.
@@ -87,9 +87,8 @@ display(AIS_df)
 # COMMAND ----------
 
 # MAGIC %sh
-# MAGIC # we download data to dbfs:// mountpoint (/dbfs)
-# MAGIC cd /dbfs/tmp/ship2ship/
-# MAGIC wget -np -r -nH -L -q --cut-dirs=7 -O harbours.geojson "https://geo.dot.gov/mapping/rest/services/NTAD/Ports_Major/MapServer/0/query?outFields=*&where=1%3D1&f=geojson"
+# MAGIC # we copy our data data to dbfs:// mountpoint (/dbfs)
+# MAGIC cp Data/Principal_Ports.geojson /dbfs/tmp/ship2ship/
 
 # COMMAND ----------
 
@@ -99,7 +98,7 @@ buffer = 10 * 1000 * one_metre
 major_ports = (
     spark.read.format("json")
     .option("multiline", "true")
-    .load("/tmp/ship2ship/harbours.geojson")
+    .load("/tmp/ship2ship/Principal_Ports.geojson")
     .select("type", explode(col("features")).alias("feature"))
     .select(
         "type",
