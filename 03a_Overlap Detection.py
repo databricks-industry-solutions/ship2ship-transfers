@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/ship2ship-transfers. For more information about this solution accelerator, visit https://medium.com/@timo.roest/ship-to-ship-transfer-detection-b370dd9d43e8.
+
+# COMMAND ----------
+
 # MAGIC %md # Overlap Detection
 # MAGIC 
 # MAGIC We now try to detect potentially overlapping pings using a buffer on a particular day.

@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/ship2ship-transfers. For more information about this solution accelerator, visit https://medium.com/@timo.roest/ship-to-ship-transfer-detection-b370dd9d43e8.
+
+# COMMAND ----------
+
 # MAGIC %md ## Line Aggregation
 # MAGIC 
 # MAGIC Instead of the point-to-point evaluation, we will instead be aggregating into lines and comparing as such.
