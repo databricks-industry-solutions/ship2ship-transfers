@@ -79,12 +79,12 @@ display(AIS_df)
 # COMMAND ----------
 
 # MAGIC %md ## Harbours
-# MAGIC 
+# MAGIC
 # MAGIC This data can be obtained from [the US DOT](https://www.transportation.gov/data), and loaded with the code below.
-# MAGIC 
+# MAGIC
 # MAGIC To avoid detecting overlap close to, or within harbours, in Notebook `03.b Advanced Overlap Detection` we filter out events taking place close to a harbour.
 # MAGIC Various approaches are possible, including filtering out events too close to shore, and can be implemented in a similar fashion.
-# MAGIC 
+# MAGIC
 # MAGIC In this instance we set a buffer of `10 km` around harbours to arbitrarily define an area wherein we do not expect ship-to-ship transfers to take place.
 # MAGIC Since our projection is not in metres, we convert from decimal degrees. With `(0.00001 - 0.000001)` as being equal to one metre at the equator
 # MAGIC Ref: http://wiki.gis.com/wiki/index.php/Decimal_degrees
@@ -92,8 +92,8 @@ display(AIS_df)
 # COMMAND ----------
 
 # MAGIC %sh
-# MAGIC # we copy our data data to dbfs:// mountpoint (/dbfs)
-# MAGIC cp Data/Principal_Ports.geojson /dbfs/tmp/ship2ship/
+# MAGIC # download our port data to dbfs:// mountpoint (/dbfs)
+# MAGIC wget -O /dbfs/tmp/ship2ship/Principal_Ports.geojson https://raw.githubusercontent.com/databricks-industry-solutions/ship2ship-transfers/main/Data/Principal_Ports.geojson
 
 # COMMAND ----------
 
