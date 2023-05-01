@@ -69,8 +69,10 @@ display(AIS_df)
 
 # COMMAND ----------
 
+# DBTITLE 1,Initialize the database we use throughout this accelerator
 # MAGIC %sql
-# MAGIC CREATE DATABASE IF NOT EXISTS ship2ship
+# MAGIC DROP DATABASE IF EXISTS ship2ship CASCADE;
+# MAGIC CREATE DATABASE ship2ship;
 
 # COMMAND ----------
 

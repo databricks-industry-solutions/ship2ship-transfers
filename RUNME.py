@@ -105,7 +105,7 @@ job_json = {
             {
                 "job_cluster_key": "ship2ship_cluster",
                 "new_cluster": {
-                    "spark_version": "13.0.x-cpu-ml-scala2.12",
+                    "spark_version": "12.2.x-cpu-ml-scala2.12",
                 "spark_conf": {
                     "spark.databricks.delta.formatCheck.enabled": "false"
                     },
